@@ -1,4 +1,7 @@
 import { WhoisService } from './service/whois.service';
 
 export { WhoisService } from './service/whois.service';
-export const whois = (domain: string) => new WhoisService().request(domain);
+
+export async function whois(domain: string): Promise<string> {
+  return await new WhoisService().request(domain);
+}

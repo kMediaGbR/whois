@@ -1,2 +1,2 @@
 export { WhoisService } from './service/whois.service';
-export declare const whois: (domain: string) => Promise<string>;
+export declare function whois(domain: string): Promise<string>;
