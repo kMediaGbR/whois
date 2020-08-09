@@ -11,9 +11,21 @@
     "start:dev": "nodemon",
     "start": "npm run build && node build/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kMediaGbR/whois.git"
+  },
+  "keywords": [
+    "kmedia",
+    "node",
+    "whois"
+  ],
+  "author": "K. Media GbR <hello@kmedia.email> (http://kmedia.rocks)",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kMediaGbR/whois/issues"
+  },
+  "homepage": "https://github.com/kMediaGbR/whois/#readme",
   "devDependencies": {
     "@types/node": "^14.0.26",
     "nodemon": "^2.0.4",
