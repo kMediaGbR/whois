@@ -1,2 +1,3 @@
-export { WhoisService } from './service/whois.service';
-export declare function whois(domain: string): Promise<string>;
+import { WhoisService } from './service/whois.service';
+declare function whois(domain: string): Promise<string>;
+export { WhoisService, whois, };

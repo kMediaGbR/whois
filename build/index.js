@@ -36,10 +36,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.whois = void 0;
+exports.whois = exports.WhoisService = void 0;
 var whois_service_1 = require("./service/whois.service");
-var whois_service_2 = require("./service/whois.service");
-Object.defineProperty(exports, "WhoisService", { enumerable: true, get: function () { return whois_service_2.WhoisService; } });
+Object.defineProperty(exports, "WhoisService", { enumerable: true, get: function () { return whois_service_1.WhoisService; } });
 function whois(domain) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
