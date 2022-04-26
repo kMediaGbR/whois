@@ -1,6 +1,6 @@
 import { createConnection } from 'net';
-import serversAsJson from '../servers.json';
-import { Server } from '../entity/server';
+import serversAsJson from '../server/servers.json';
+import { Server } from '../server/server';
 
 export class WhoisService {
   private servers: Map<string, Server | null>;
@@ -8,17 +8,13 @@ export class WhoisService {
   constructor() {
     this.servers = new Map(
       Object.entries(serversAsJson)
-        .filter((entry) => !!entry[1])
-        .map((entry) => [
-          entry[0],
-          entry[1] ? Server.fromJson(entry[1] as Server) : null,
-        ])
+        .filter((entry) => Boolean(entry[1]))
+        .map((entry) => [entry[0], Server.fromJson(entry[1])])
     );
   }
 
   async request(domain: string): Promise<string> {
     const { server, port, query } = this.getServer(domain);
-
     return new Promise((resolve, reject) => {
       let response = '';
 

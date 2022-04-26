@@ -1,11 +1,12 @@
-import { WhoisService } from './service/whois.service';
+import { Whois } from './whois/whois.entity';
+import { WhoisHandler } from './whois/whois.handler';
 
-async function whois(domain: string): Promise<string> {
-  return await new WhoisService().request(domain);
+async function whois(domain: string): Promise<Whois> {
+  const whoisHandler = new WhoisHandler();
+  return await whoisHandler.parse(domain);
 }
 
 export {
-  WhoisService,
+  WhoisHandler,
   whois,
 };
-

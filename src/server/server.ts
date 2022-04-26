@@ -9,7 +9,7 @@ export class Server {
     this.query = query;
   }
 
-  static fromJson({ server, port, query }: Server): Server {
+  static fromJson({ server, port, query }: any): Server {
     return new Server(server, port, query);
   }
 }
