@@ -7,6 +7,7 @@ async function whois(domain: string): Promise<Whois> {
 }
 
 export {
+  Whois,
   WhoisHandler,
   whois,
 };
