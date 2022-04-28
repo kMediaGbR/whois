@@ -1,6 +1,6 @@
 {
   "name": "@kmedia/whois",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "The whois utility looks up records in the databases maintained by several Network Information Centers (NICs)",
   "main": "./build/index.js",
   "bin": {
