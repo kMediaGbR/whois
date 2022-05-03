@@ -7,10 +7,12 @@
     "kwhois": "./build/bin/index.js"
   },
   "scripts": {
-    "bump:version": "npm version",
     "build": "rimraf ./build && tsc",
     "start:dev": "nodemon",
-    "test": "jest"
+    "test": "jest",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
   },
   "repository": {
     "type": "git",
@@ -28,15 +30,15 @@
   },
   "homepage": "https://github.com/kMediaGbR/whois/#readme",
   "devDependencies": {
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^27.5.0",
     "@types/lodash": "^4.14.182",
-    "@types/node": "^17.0.27",
-    "jest": "^28.0.0",
-    "nodemon": "^2.0.15",
+    "@types/node": "^17.0.31",
+    "jest": "^28.0.3",
+    "nodemon": "^2.0.16",
     "rimraf": "^3.0.2",
-    "ts-jest": "^27.1.4",
+    "ts-jest": "^28.0.0",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.4"
   },
   "dependencies": {
     "commander": "^9.2.0",
