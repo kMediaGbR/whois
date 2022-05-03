@@ -3,7 +3,7 @@
 // @ts-ignore
 import packageJson from '../../package.json';
 import { Command } from 'commander';
-import { WhoisHandler } from "../whois/whois.handler";
+import { WhoisHandler } from '../whois/whois.handler';
 
 const program = new Command();
 
