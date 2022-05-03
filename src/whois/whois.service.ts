@@ -22,9 +22,7 @@ export class WhoisService {
         client.write(query.replace('%{domain}', domain))
       });
 
-      client.on('data', (data) => {
-        response += data;
-      });
+      client.on('data', data => response += data);
 
       client.on('error', reject)
       client.on('timeout', () => {

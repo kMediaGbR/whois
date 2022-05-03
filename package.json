@@ -7,6 +7,7 @@
     "kwhois": "./build/bin/index.js"
   },
   "scripts": {
+    "bump:version": "npm version",
     "build": "rimraf ./build && tsc",
     "start:dev": "nodemon",
     "test": "jest"
