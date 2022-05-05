@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rimraf ./build && tsc",
     "start:dev": "nodemon",
-    "test": "jest",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

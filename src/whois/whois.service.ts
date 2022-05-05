@@ -24,10 +24,8 @@ export class WhoisService {
 
       client.on('data', data => response += data);
 
-      client.on('error', reject)
-      client.on('timeout', () => {
-        reject(new Error('Connection timed out'))
-      })
+      client.on('error', reject);
+      client.on('timeout', () => reject(new Error('Connection timed out')));
 
       client.on('close', (hasError) => {
         if (hasError) {
